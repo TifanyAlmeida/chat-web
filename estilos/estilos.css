@@ -1,0 +1,182 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    background-color:turquoise;
+}
+
+/* Título do Site*/
+#title{
+  font-family: 'BIZ UDPMincho', serif;
+  margin-left: 3rem;
+}
+.mae_titulo{
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  margin-top: 2rem;
+}
+.tudo{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}
+/* Classe Mãe */
+.chat{
+  display: flex;
+  flex-direction: column;
+  height: 53vh;
+  width: 700px;
+  margin-top: 2rem;
+  overflow-y: scroll;
+}
+
+.chat::-webkit-scrollbar {
+  width: 6px;
+}
+.chat::-webkit-scrollbar-track {
+  border-radius: 20px; 
+  background: rgb(20, 65, 144);
+}
+.chat::-webkit-scrollbar-thumb {
+  background-color: rgb(48, 152, 190); 
+  border-radius: 20px;
+}
+
+/* mensagem exibida*/
+.msg {
+  flex-direction: row;
+  padding: 1rem;
+  margin: 1rem;
+  display: flex;
+}
+
+/* campo com as informações das mensagens*/
+.eu, .outros{
+  display: flex;
+  align-content: center;
+  flex: 1;
+}
+.eu{
+  justify-content: flex-end;
+}
+.outros{
+  justify-content: flex-start;
+}
+
+/* Nome e Mensagem Alinhados um embaixo do outro */
+b {
+    display: block;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+
+/*Entrada de dados*/
+.msgem{
+    border-style: none;
+    background-color: #ff7037;
+    width: 700px;
+    max-width: 700px;
+    padding: 1rem;
+    font-size: 16px;
+    border-radius: 2rem;
+    margin-bottom: 2rem;
+}
+.msgem:hover{
+  background-color: #f25619ec;
+}
+input[type = "text"]::placeholder{
+    color: black;
+    opacity: 0.5;
+}
+
+.local_enviar{
+  display: flex;
+  margin-top: 3rem;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}
+
+#botao{
+  background-color: rgb(51, 48, 48);
+  border-style: none;
+  padding: 1rem;
+  margin-left: 0.5rem;
+  border-radius: 50%;
+  color:white;
+}
+#botao:hover{
+  background-color: rgb(93, 88, 88);
+}
+.balao, .balao_eu{
+  border-radius: 2rem 2rem 2rem 2rem;
+  padding: 1.5rem;
+  width: 200px;
+}
+.balao{
+  background: rgb(13, 161, 75);
+
+}
+.balao_eu{
+  background: rgb(90, 108, 167);
+
+}
+.dados_eu, .dados_outros{
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.dados_eu{
+  margin-left: 2rem;
+}
+.dados_outros{
+  margin-right: 1rem;
+}
+.fa-trash-o:before{ 
+  content: "\f014";
+  background-color: red;
+  color: rgb(0, 0, 0);
+  padding: 0.2rem;
+  border-radius: 50%;
+}
+.fa-trash-o:hover{
+  border: 1px solid black;
+  background: yellow;
+}
+@media screen and (max-width:600px){
+  .balao, .balao_eu{
+    width: 150px;
+  }
+  .msg{
+    margin: 0;
+  }
+  .msgem{
+    width: 300px;
+  }
+  nav{
+    margin: 2rem;
+  }
+  img{
+    width: 80px;
+    height: 80px;
+  }
+  .local_enviar{
+    margin-top: 0;
+    margin-bottom: 2rem;
+  }
+}
+@media screen and (max-width: 240px){
+ .msgem{
+   width: 220px;
+ }
+ .chat{
+   overflow-x: hidden;
+ }
+}
